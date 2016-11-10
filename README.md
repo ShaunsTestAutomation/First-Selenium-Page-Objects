@@ -1,6 +1,6 @@
-# First-Selenium-Page-Objects
+#First-Selenium-Page-Objects
 Showcase maven POM to build simple java selenium tests in page object design pattern.  
-Based upon login example from "the-internet" by Dave Heaffner.
+Based upon login example from "the-internet" by Dave Haeffner.
 
 #This project:-<BR>
   1) uses Maven to build and execute.<BR>
