@@ -20,6 +20,6 @@ mvn clean test
     The current project only uses a single hard coded browser at a time (currently Firefox, or IE)<BR>
 2)  Add screen shots for test evidence<BR>
 3)  Add logging class for standardized test evidencing<BR>
-4)  Add data driven test class to take input from external resource file (csv or xls)
+4)  Add data driven test class to take input from external resource file (csv or xls)<BR>
 5)  Parallelize the test execution.<BR>
 6)  Add more pages to test via more page objects<BR>
