@@ -1,3 +1,4 @@
+
 #First-Selenium-Page-Objects
 Showcase maven POM to build simple java selenium tests in page object design pattern.  
 Based upon login example from "the-internet" by Dave Haeffner.
@@ -13,11 +14,13 @@ Based upon login example from "the-internet" by Dave Haeffner.
   ii)Implements a class specifically for handling Selenium explicit wait statments (SeleniumTimers.java)<BR>
 
 #Usage:
-mvn clean test
+`mvn clean test [-D[browser=["firefox"|"ie"|"headless"] [host=["localhost"|"<ipaddress>"]]`<BR>
+e.g.<br>
+`mvn clean test -Dbrowser="headless"`
 
 #To Do list:
-1)  extend the Base.java class to allow flexible calling of different browser versions and O/S's.<BR>
-    The current project only uses a single hard coded browser at a time (currently Firefox, or IE)<BR>
+1)  ~~extend the Base.java class to allow flexible calling of different browser versions and O/S's.<BR>
+    The current project only uses a single hard coded browser at a time (currently Firefox, or IE)~~<BR>
 2)  Add screen shots for test evidence<BR>
 3)  Add logging class for standardized test evidencing<BR>
 4)  Add data driven test class to take input from external resource file (csv or xls)<BR>
