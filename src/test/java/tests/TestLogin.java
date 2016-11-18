@@ -10,10 +10,10 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import pageobjects.Login;
 import pageobjects.SeleniumTimers;
 
+//Now we have added and inhereted the Base class, we can do all global test related functions such as
+//setup and tear down in that class.  This makes the test class much more readable as it now only
+// contains test cases
 public class TestLogin extends Base{
-
-    //private WebDriver driver;
-    //removed definition of driver from here as it is inhereted from Base class now.
 
     private Login login;
     private SeleniumTimers wait;
@@ -21,8 +21,6 @@ public class TestLogin extends Base{
     @Before
     public void setUp() {
         login = new Login(driver);
-        //Note! We have now abstracted the driver setup into the Base class.
-        //This means that we no longer start the browser here as it is already taken care off
     }
 
     @Test
@@ -37,18 +35,10 @@ public class TestLogin extends Base{
         login.with("tomsmith", "bad password");
         assertTrue("failure message wasn't present after providing bogus credentials",
                 login.failureMessagePresent());
-        //assertFalse("success message was present after providing bogus credentials",
-        //        login.successMessagePresent());
     }
     @Test
     public void harrysTest() {
         login.with("HarryWilliams", "harrysPassword");
         assertTrue("Logged in when we shouldn't have", login.failureMessagePresent());
     }
-    //We can remove the teardown from here as it is now in the Base class along
-    //with the setup.  The Base class takes care of handling the driver state.
-    //@After
-    //public void tearDown() {
-    //    driver.quit();
-    //}
 }
